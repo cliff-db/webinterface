@@ -1,56 +1,66 @@
-
 <script>
-    import Icon from 'svelte-awesome';
-    import { faChartBar } from '@fortawesome/free-regular-svg-icons';
-    import { faUsers, faPuzzlePiece, faCog, faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
-</script>
+    import Icon from "svelte-awesome";
+    import { faChartBar } from "@fortawesome/free-regular-svg-icons";
+    import {
+        faUsers,
+        faPuzzlePiece,
+        faServer,
+        faDatabase,
+        faQuoteRight
+    } from "@fortawesome/free-solid-svg-icons";
+    import { link } from "svelte-spa-router";
 
-<div class="sidebar">
-    <div class="element">
-        <span class="icon">
-            <Icon data={faChartBar}/>
-        </span>
-        <span class="content">
-            Dashboard
-        </span>
-    </div>
-    <div class="group">
-        <div class="group-title">
-            <span class="content">Administrative</div>
-        <div class="element">
-            <span class="icon">
-                <Icon data={faUsers}/>
-            </span>
-            <span class="content">
-                User Management
-            </span>
-        </div>
-        <div class="element">
-            <span class="icon">
-                <Icon data={faPuzzlePiece}/>
-            </span>
-            <span class="content">
-                Plugins
-            </span>
-        </div>
-        <div class="element">
-            <span class="icon">
-                <Icon data={faServer}/>
-            </span>
-            <span class="content">
-                Server Settings
-            </span>
-        </div>
-    </div>
-    <div class="element">
-        <span class="icon">
-            <Icon data={faDatabase}/>
-        </span>
-        <span class="content">
-            Databases
-        </span>
-    </div>
-</div>
+    let sidebarGroups = [
+        {
+            name: "Main",
+            titleVisible: false,
+            contents: [
+                {
+                    name: "Dashboard",
+                    href: "/dashboard",
+                    icon: faChartBar,
+                },
+            ],
+        },
+        {
+            name: "Administrative",
+            titleVisible: true,
+            contents: [
+                {
+                    name: "User Management",
+                    href: "/users",
+                    icon: faUsers,
+                },
+                {
+                    name: "Plugins",
+                    href: "/plugins",
+                    icon: faPuzzlePiece,
+                },
+                {
+                    name: "Server Settings",
+                    href: "/server-settings",
+                    icon: faServer,
+                },
+            ],
+        },
+        {
+            name: "Data",
+            titleVisible: false,
+            contents: [
+                {
+                    name: "Databases",
+                    href: "/database/lorem-ipsum",
+                    icon: faDatabase,
+                },
+                {
+                    name: "W.I.P. Query Editor",
+                    href: "/editor",
+                    icon: faQuoteRight,
+                },
+            ],
+        },
+    ];
+</script>
 
 <style type="text/scss">
     $background-color: #ecf0f1;
@@ -58,16 +68,13 @@
 
     .sidebar {
         .group {
-            margin-top: 12px;
-            
             border-top-width: 1px;
             border-bottom-width: 1px;
-            border-top-style: solid;
             border-bottom-style: solid;
-            border-top-color: #2c3e50;
             border-bottom-color: #2c3e50;
 
             .group-title {
+                margin-top: 12px;
                 font-size: 13pt;
                 display: flex;
                 padding-left: 12px;
@@ -75,7 +82,7 @@
                 padding-right: 12px;
                 margin-right: 12px;
                 font-weight: 500;
-                letter-spacing: .007px;
+                letter-spacing: 0.007px;
                 text-transform: uppercase;
 
                 color: darken($background-color, 90%);
@@ -107,4 +114,31 @@
             }
         }
     }
+
+    a {
+        color: inherit; /* remove blue link color */
+        text-decoration: inherit; /* remove underline */
+    }
 </style>
+
+<div class="sidebar">
+    {#each sidebarGroups as group}
+        <div class="group">
+            {#if group.titleVisible}
+                <div class="group-title">
+                    <span class="content">{group.name}</span>
+                </div>
+            {/if}
+            {#each group.contents as element}
+                <a href={element.href} use:link>
+                    <div class="element">
+                        <span class="icon">
+                            <Icon data={element.icon} />
+                        </span>
+                        <span class="content"> {element.name} </span>
+                    </div>
+                </a>
+            {/each}
+        </div>
+    {/each}
+</div>
