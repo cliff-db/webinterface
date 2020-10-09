@@ -4,11 +4,15 @@
     import {theme} from './storage';
     import Theme from './Theme.svelte';
 
+    import Header from './components/Header.svelte';
     import Sidebar from './components/Sidebar.svelte';
 </script>
 
 <Theme theme="{$theme}"/>
 <main>
+    <header>
+        <Header/>
+    </header>
 	<aside>
 		<Sidebar/>
 	</aside>
@@ -18,8 +22,19 @@
 </main>
 
 <style lang="scss">
+    $header-height: 36px;
+
+    $sidebar-height: calc(100% - #{$header-height});
 	$sidebar-width: 20%;
     $main-width: 100% - $sidebar-width;
+
+    header {
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: $header-height;
+        width: 100%;
+    }
 
     :global(body) {
         background-color: var(--theme-background);
@@ -35,16 +50,16 @@
         text-align: center;
         margin: 0 auto;
 		width: $main-width;
-		top: 0;
+		top: $header-height;
         left: $sidebar-width;
     }
 
     aside {
         position: fixed;
-        height: 100%;
+        height: $sidebar-height;
         width: $sidebar-width;
         left: 0;
-        top: 0;
+        top: $header-height;
         overflow-x: hidden;
         overflow-y: auto;
         background-color: var(--theme-sidebar-background);
