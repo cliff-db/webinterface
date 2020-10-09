@@ -6,9 +6,9 @@
 </script>
 
 <div id="app">
-	<div class="sidebar">
+	<aside class="sidebar">
 		<Sidebar/>
-	</div>
+	</aside>
 	<main class="router-view">
 		<Router {routes}/>
 	</main>
