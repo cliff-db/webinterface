@@ -5,24 +5,24 @@
     import Sidebar from './components/Sidebar.svelte';
 </script>
 
-<div id="app">
-	<aside class="sidebar">
+<main>
+	<aside>
 		<Sidebar/>
 	</aside>
-	<main class="router-view">
+	<article>
 		<Router {routes}/>
-	</main>
-</div>
+	</article>
+</main>
 
 <style lang="scss">
 	$sidebar-width: 20%;
     $main-width: 100% - $sidebar-width;
 
-	#app {
+	main {
 		width: 100%;
 	}
 
-	.router-view {
+	article {
         position: fixed;
         text-align: center;
         margin: 0 auto;
@@ -31,7 +31,7 @@
         left: $sidebar-width;
     }
 
-    .sidebar {
+    aside {
         position: fixed;
         height: 100%;
         width: $sidebar-width;

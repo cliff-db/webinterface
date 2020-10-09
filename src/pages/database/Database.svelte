@@ -1,24 +1,26 @@
 <script>
-    import Icon from 'svelte-awesome';
-    import { faChartBar } from '@fortawesome/free-regular-svg-icons';
-    import { faTable, faMountain, faFolderOpen, faGlassMartiniAlt, faCode, faEthernet, faHdd, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
+    import Icon from "svelte-awesome";
+    import { faChartBar } from "@fortawesome/free-regular-svg-icons";
+    import {
+        faTable,
+        faMountain,
+        faFolderOpen,
+        faGlassMartiniAlt,
+        faCode,
+        faEthernet,
+        faHdd,
+        faShieldAlt,
+    } from "@fortawesome/free-solid-svg-icons";
 
-    export let params = {}
+    export let params = {};
 </script>
 
 <style type="text/scss">
-
     h1 {
         color: #f19066;
         text-transform: uppercase;
         font-size: 2em;
         font-weight: 100;
-    }
-
-    @media (min-width: 640px) {
-        main {
-            max-width: none;
-        }
     }
 
     .grid-container {
@@ -64,7 +66,7 @@
             padding-top: 48px;
             padding-bottom: 48px;
 
-            $panel-background-color:#b2f1f5;
+            $panel-background-color: #b2f1f5;
             background-color: $panel-background-color;
             transition: all 200ms;
             cursor: pointer;
@@ -119,44 +121,42 @@
     }
 </style>
 
-<main>
-    <h1>Database Control Panel: {params.databaseName}</h1>
-    <div class="grid-container">
-        <div class="diagrams">
-            <Icon data={faChartBar} scale="2"/>
-            <span>Diagrams</span>
-        </div>
-        <div class="tables">
-            <Icon data={faTable} scale="2"/>
-            <span>Tables</span>
-        </div>
-        <div class="views">
-            <Icon data={faMountain} scale="2"/>
-            <span>Views</span>
-        </div>
-        <div class="external-resources">
-            <Icon data={faFolderOpen} scale="2"/>
-            <span>External Resources</span>
-        </div>
-        <div class="synonyms">
-            <Icon data={faGlassMartiniAlt} scale="2"/>
-            <span>Synonyms</span>
-        </div>
-        <div class="programmability">
-            <Icon data={faCode} scale="2"/>
-            <span>Programmability</span>
-        </div>
-        <div class="service-broker">
-            <Icon data={faEthernet} scale="2"/>
-            <span>Service Broker</span>
-        </div>
-        <div class="storage">
-            <Icon data={faHdd} scale="2"/>
-            <span>Storage</span>
-        </div>
-        <div class="security">
-            <Icon data={faShieldAlt} scale="2"/>
-            <span>Security</span>
-        </div>
+<h1>Database Control Panel: {params.databaseName}</h1>
+<div class="grid-container">
+    <div class="diagrams">
+        <Icon data={faChartBar} scale="2" />
+        <span>Diagrams</span>
     </div>
-</main>
+    <div class="tables">
+        <Icon data={faTable} scale="2" />
+        <span>Tables</span>
+    </div>
+    <div class="views">
+        <Icon data={faMountain} scale="2" />
+        <span>Views</span>
+    </div>
+    <div class="external-resources">
+        <Icon data={faFolderOpen} scale="2" />
+        <span>External Resources</span>
+    </div>
+    <div class="synonyms">
+        <Icon data={faGlassMartiniAlt} scale="2" />
+        <span>Synonyms</span>
+    </div>
+    <div class="programmability">
+        <Icon data={faCode} scale="2" />
+        <span>Programmability</span>
+    </div>
+    <div class="service-broker">
+        <Icon data={faEthernet} scale="2" />
+        <span>Service Broker</span>
+    </div>
+    <div class="storage">
+        <Icon data={faHdd} scale="2" />
+        <span>Storage</span>
+    </div>
+    <div class="security">
+        <Icon data={faShieldAlt} scale="2" />
+        <span>Security</span>
+    </div>
+</div>

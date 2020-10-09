@@ -1,12 +1,11 @@
 <script lang="ts">
     import Icon from "svelte-awesome";
-    import { faChartBar } from "@fortawesome/free-regular-svg-icons";
     import { faPlay, faCheck } from "@fortawesome/free-solid-svg-icons";
 
     import { onMount } from "svelte";
 
     import { Parser } from "node-sql-parser";
-    
+
     let query: string = "-- Example";
     let parser = new Parser();
 
@@ -78,11 +77,11 @@
     </button>
 </div>
 <code
-        class="query-editor language-sql"
-        contenteditable
-        bind:textContent={query}
-        on:change={(event) => {
-            highlight(event.currentTarget);
-        }}>
-            <!-- Editor Content -->
-        </code>
+    class="query-editor language-sql"
+    contenteditable
+    bind:textContent={query}
+    on:change={(event) => {
+        highlight(event.currentTarget);
+    }}>
+    <!-- Editor Content -->
+</code>
