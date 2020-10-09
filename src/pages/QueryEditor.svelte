@@ -1,9 +1,7 @@
 <script lang="ts">
     import Icon from "svelte-awesome";
     import { faPlay, faCheck } from "@fortawesome/free-solid-svg-icons";
-
     import { onMount } from "svelte";
-
     import { Parser } from "node-sql-parser";
 
     let query: string = "-- Example";
