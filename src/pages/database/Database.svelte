@@ -28,39 +28,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
-        grid-template-areas:
-            "diagrams tables views"
-            "external-resources synonyms programmability"
-            "service-broker storage security";
-        margin-right: 24px;
-
-        .diagrams {
-            grid-area: diagrams;
-        }
-        .tables {
-            grid-area: tables;
-        }
-        .views {
-            grid-area: views;
-        }
-        .external-resources {
-            grid-area: external-resources;
-        }
-        .synonyms {
-            grid-area: synonyms;
-        }
-        .programmability {
-            grid-area: programmability;
-        }
-        .service-broker {
-            grid-area: service-broker;
-        }
-        .storage {
-            grid-area: storage;
-        }
-        .security {
-            grid-area: security;
-        }
+        margin-left: 48px;
+        margin-right: 48px;
 
         & > div {
             padding-top: 48px;
@@ -122,39 +91,39 @@
 
 <h1>Database Control Panel: {params.databaseName}</h1>
 <div class="grid-container">
-    <div class="diagrams">
+    <div>
         <Icon data={faChartBar} scale="2" />
         <span>Diagrams</span>
     </div>
-    <div class="tables">
+    <div>
         <Icon data={faTable} scale="2" />
         <span>Tables</span>
     </div>
-    <div class="views">
+    <div>
         <Icon data={faMountain} scale="2" />
         <span>Views</span>
     </div>
-    <div class="external-resources">
+    <div>
         <Icon data={faFolderOpen} scale="2" />
         <span>External Resources</span>
     </div>
-    <div class="synonyms">
+    <div>
         <Icon data={faGlassMartiniAlt} scale="2" />
         <span>Synonyms</span>
     </div>
-    <div class="programmability">
+    <div>
         <Icon data={faCode} scale="2" />
         <span>Programmability</span>
     </div>
-    <div class="service-broker">
+    <div>
         <Icon data={faEthernet} scale="2" />
         <span>Service Broker</span>
     </div>
-    <div class="storage">
+    <div>
         <Icon data={faHdd} scale="2" />
         <span>Storage</span>
     </div>
-    <div class="security">
+    <div>
         <Icon data={faShieldAlt} scale="2" />
         <span>Security</span>
     </div>
