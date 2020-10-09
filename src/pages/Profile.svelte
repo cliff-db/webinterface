@@ -1,4 +1,14 @@
-<script>
+<script lang="ts">
+    import {theme} from '../storage';
+
+    function switchTheme() {
+        if($theme == 'light') {
+            theme.set('dark');
+        } else {
+            theme.set('light');
+        }
+        location.reload();
+    }
 </script>
 
 <style type="text/scss">
@@ -34,4 +44,10 @@
 <div class="property">
     <span class="key">Password</span>
     <span class="value">*******</span>
+</div>
+<div class="property">
+    <span class="key">Theme</span>
+    <span class="value">{$theme}</span>
+    <!-- This button is only for testing purposes: -->
+    <button on:click="{() => switchTheme()}">Switch Theme</button>
 </div>

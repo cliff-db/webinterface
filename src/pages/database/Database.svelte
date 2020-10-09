@@ -66,13 +66,12 @@
             padding-top: 48px;
             padding-bottom: 48px;
 
-            $panel-background-color: #b2f1f5;
-            background-color: $panel-background-color;
+            background-color: var(--theme-selection-grid-background);
             transition: all 200ms;
             cursor: pointer;
 
             &:hover {
-                background-color: lighten($panel-background-color, 10%);
+                background-color: var(--theme-selection-grid-background-hover);
             }
 
             display: -ms-flexbox;

@@ -63,14 +63,11 @@
 </script>
 
 <style type="text/scss">
-    $background-color: #ecf0f1;
-    $background-color-hover: darken($background-color, 4%);
-
     .group {
         border-top-width: 1px;
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: #2c3e50;
+        border-bottom-color: var(--theme-secondary-foreground);
 
         .group-title {
             margin-top: 12px;
@@ -84,7 +81,7 @@
             letter-spacing: 0.007px;
             text-transform: uppercase;
 
-            color: darken($background-color, 90%);
+            color: var(--theme-foreground);
             margin-left: 8px;
         }
     }
@@ -97,7 +94,7 @@
         font-weight: 600;
         transition: all 200ms;
         cursor: pointer;
-        background-color: $background-color;
+        background-color: var(--theme-sidebar-background);
         display: flex;
 
         .icon {
@@ -109,7 +106,7 @@
         }
 
         &:hover {
-            background-color: $background-color-hover;
+            background-color: var(--theme-sidebar-background-hover);
         }
     }
 
