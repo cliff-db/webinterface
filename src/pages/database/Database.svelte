@@ -11,7 +11,7 @@
         faHdd,
         faShieldAlt,
     } from "@fortawesome/free-solid-svg-icons";
-
+    import { _ } from 'svelte-i18n'
     export let params = {};
 </script>
 
@@ -93,38 +93,38 @@
 <div class="grid-container">
     <div>
         <Icon data={faChartBar} scale="2" />
-        <span>Diagrams</span>
+        <span>{$_("database.diagrams")}</span>
     </div>
     <div>
         <Icon data={faTable} scale="2" />
-        <span>Tables</span>
+        <span>{$_("database.tables")}</span>
     </div>
     <div>
         <Icon data={faMountain} scale="2" />
-        <span>Views</span>
+        <span>{$_("database.views")}</span>
     </div>
     <div>
         <Icon data={faFolderOpen} scale="2" />
-        <span>External Resources</span>
+        <span>{$_("database.external_resources")}</span>
     </div>
     <div>
         <Icon data={faGlassMartiniAlt} scale="2" />
-        <span>Synonyms</span>
+        <span>{$_("database.synonyms")}</span>
     </div>
     <div>
         <Icon data={faCode} scale="2" />
-        <span>Programmability</span>
+        <span>{$_("database.programmability")}</span>
     </div>
     <div>
         <Icon data={faEthernet} scale="2" />
-        <span>Service Broker</span>
+        <span>{$_("database.service_broker")}</span>
     </div>
     <div>
         <Icon data={faHdd} scale="2" />
-        <span>Storage</span>
+        <span>{$_("database.storage")}</span>
     </div>
     <div>
         <Icon data={faShieldAlt} scale="2" />
-        <span>Security</span>
+        <span>{$_("database.security")}</span>
     </div>
 </div>

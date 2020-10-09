@@ -8,6 +8,8 @@
         faDatabase,
         faQuoteRight,
     } from "@fortawesome/free-solid-svg-icons";
+    
+    import { _ } from 'svelte-i18n'
     import { link } from "svelte-spa-router";
 
     let sidebarGroups = [
@@ -27,17 +29,17 @@
             titleVisible: true,
             contents: [
                 {
-                    name: "User Management",
+                    name: $_("sidebar.user_management"),
                     href: "/users",
                     icon: faUsers,
                 },
                 {
-                    name: "Plugins",
+                    name: $_("sidebar.plugins"),
                     href: "/plugins",
                     icon: faPuzzlePiece,
                 },
                 {
-                    name: "Server Settings",
+                    name: $_("sidebar.server_settings"),
                     href: "/server-settings",
                     icon: faServer,
                 },
@@ -48,7 +50,7 @@
             titleVisible: false,
             contents: [
                 {
-                    name: "Databases",
+                    name: $_("sidebar.databases"),
                     href: "/database/lorem-ipsum",
                     icon: faDatabase,
                 },

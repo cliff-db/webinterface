@@ -1,0 +1,20 @@
+{
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "user_management": "Nutzerverwaltung",
+        "plugins": "Plug-Ins",
+        "server_settings": "Servereinstellungen",
+        "databases": "Datenbanken"
+    },
+    "database": {
+        "diagrams": "Diagramme",
+        "tables": "Tabellen",
+        "views": "Sichten",
+        "external_resources": "Externe Ressourcen",
+        "synonyms": "Synonyme",
+        "programmability": "Programmierung",
+        "service_broker": "Service Broker",
+        "storage": "Speicherung",
+        "security": "Sicherheit"
+    }
+}

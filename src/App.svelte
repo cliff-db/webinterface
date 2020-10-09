@@ -3,6 +3,8 @@
     import routes from './routes';
     import {theme} from './storage';
     import Theme from './Theme.svelte';
+    import {initializeLanguages} from './i18n';
+    initializeLanguages();
 
     import Header from './components/Header.svelte';
     import Sidebar from './components/Sidebar.svelte';
