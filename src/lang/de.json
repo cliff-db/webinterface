@@ -16,5 +16,15 @@
         "service_broker": "Service Broker",
         "storage": "Speicherung",
         "security": "Sicherheit"
+    },
+    "plugins": {
+        "gallery_type": {
+            "installed": "Installierte Plug-ins",
+            "gallery": "Plug-in Gallerie"
+        },
+        "action": {
+            "install": "Installieren",
+            "uninstall": "Deinstallieren"
+        }
     }
 }
