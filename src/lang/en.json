@@ -16,5 +16,15 @@
         "service_broker": "Service Broker",
         "storage": "Storage",
         "security": "Security"
+    },
+    "plugins": {
+        "gallery_type": {
+            "installed": "Installed Plugins",
+            "gallery": "Plugin Gallery"
+        },
+        "action": {
+            "install": "Install",
+            "uninstall": "Uninstall"
+        }
     }
 }
