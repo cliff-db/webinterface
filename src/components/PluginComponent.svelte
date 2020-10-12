@@ -2,6 +2,7 @@
     import { _ } from 'svelte-i18n';
 
     export let name: string;
+    export let iconSource: string;
     export let description: string;
     export let version: string;
     export let install: boolean;
@@ -10,13 +11,9 @@
 <style lang="scss">
     .plugin {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 75px 1fr 1fr;
         border-radius: 5px;
         background-color: var(--theme-selection-grid-background);
-
-        & > div {
-            padding: 12px;
-        }
     }
 
     .action-button {
@@ -28,6 +25,8 @@
         font-weight: 900;
         cursor: pointer;
         transition: all 200ms;
+
+        padding: 12px;
         
         &[data-action=install] {
             background-color: #2ecc71;
@@ -67,10 +66,24 @@
 
     .text-container {
         text-align: left;
+        padding: 12px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+    img {
+        width: 100%;
     }
 </style>
 
 <div class="plugin">
+    <div class="icon-container">
+        <img src="{iconSource}" alt="{name}"/>
+    </div>
     <div class="text-container">
         <div>
             <span class="name">{name}</span>

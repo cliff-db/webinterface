@@ -106,6 +106,7 @@
                         name={plugin.name}
                         description={plugin.description}
                         version={plugin.version}
+                        iconSource="/img/dummy_plugin_icon_alt.svg"
                         install={!plugin.installed}/>
                 {/each}
             </div>
