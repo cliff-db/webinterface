@@ -54,6 +54,8 @@
 		width: $main-width;
 		top: $header-height;
         left: $sidebar-width;
+        height: calc(100vh - #{$header-height});
+        overflow: auto;
     }
 
     aside {
