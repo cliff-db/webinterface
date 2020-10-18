@@ -10,7 +10,8 @@
     import Sidebar from './components/Sidebar.svelte';
 </script>
 
-<Theme theme="{$theme}"/>
+
+<Theme theme={$theme} />
 <main>
     <header>
         <Header/>

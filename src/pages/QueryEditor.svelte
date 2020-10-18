@@ -2,13 +2,10 @@
     import Icon from "svelte-awesome";
     import { faPlay, faCheck } from "@fortawesome/free-solid-svg-icons";
     import { onMount } from "svelte";
-    import { Parser } from "node-sql-parser";
 
     let query: string = "-- Example";
-    let parser = new Parser();
 
-    function highlight(element: HTMLElement) {
-        let ast = parser.astify(query);
+    function highlight(_element: HTMLElement) {
         // TODO
     }
 

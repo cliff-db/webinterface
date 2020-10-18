@@ -12,7 +12,7 @@
         faShieldAlt,
     } from "@fortawesome/free-solid-svg-icons";
     import { _ } from 'svelte-i18n'
-    export let params = {};
+    export let params: any;
 </script>
 
 <style type="text/scss">

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="typescript">
     import PluginComponent from "../components/PluginComponent.svelte";
     import { _ } from 'svelte-i18n';
 
