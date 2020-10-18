@@ -5,6 +5,7 @@ import Plugins from './pages/Plugins.svelte';
 import QueryEditor from './pages/QueryEditor.svelte';
 import Profile from './pages/Profile.svelte';
 import Database from './pages/database/Database.svelte';
+import ServerSettings from './pages/ServerSettings.svelte';
 
 const routes = {
     '/': Home,
@@ -14,6 +15,7 @@ const routes = {
     '/profile': Profile,
     '/plugins': Plugins,
     '/database/:databaseName': Database,
+    '/server-settings': ServerSettings,
 }
 
 export default routes;
