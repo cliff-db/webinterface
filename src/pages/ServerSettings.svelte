@@ -1,4 +1,5 @@
 <script>
+    import SizeInput from '../components/SizeInput.svelte';
 </script>
 
 <style type="text/scss">
@@ -16,28 +17,30 @@
 </style>
 
 <div class="settings">
+    <SizeInput></SizeInput>
     <h1>Server Settings</h1>
     <h2>Memory</h2>
 
     <h3>Server memory options</h3>
     <div class="setting">
         <label for="min-server-memory">Minimum server memory (in MB)</label>
-        <input type="text" name="min-server-memory" value="0" />
+        <input type="text" name="min-server-memory" value="{1}" />
     </div>
     <div class="setting">
         <label for="max-server-memory">Maximum server memory (in MB)</label>
-        <input type="text" name="max-server-memory" value="2147483647" />
+        <input type="text" name="max-server-memory" value="{2147483647}" />
+        <SizeInput/>
     </div>
 
     <h3>Other memory options</h3>
     <div class="setting">
         <label for="index-creation-memory">Index creation memory (in KB, 0 =
             dynamic memory)</label>
-        <input type="text" name="index-creation-memory" value="0" />
+        <input type="text" name="index-creation-memory" value="{0}" />
     </div>
     <div class="setting">
         <label for="min-memory-per-query">Minimum memory per query (in KB)</label>
-        <input type="text" name="min-memory-per-query" value="1024" />
+        <input type="text" name="min-memory-per-query" value="{1024}" />
     </div>
 
     <h2>Processors</h2>
