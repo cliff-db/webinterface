@@ -1,4 +1,5 @@
 <script lang="ts">
+<<<<<<< HEAD
     import {DataType, getSuffix, convert} from '../datatypes';
 
     export let type: DataType = DataType.Byte;
@@ -32,6 +33,33 @@
     <select class="suffix" bind:this={select} on:blur={handleChange}>
         {#each enums as element}
             <option value={element}>{getSuffix(element)}</option>
+=======
+    const suffixes: string[] = [
+        "B",
+        "kB",
+        "MB",
+        "GB",
+        "TB",
+        "PB",
+        "EB",
+        "ZB",
+        "YB"
+    ];
+
+    export let suffix: string;
+    export let size: number;
+
+    export function asBytes() {
+
+    }
+</script>
+
+<span>
+    <input class="size" bind:value={size} type="number"/>
+    <select class="type" bind:value={suffix}>
+        {#each suffixes as suffix}
+            <option>{suffix}</option>
+>>>>>>> 412c6e2315cc2cb35ff9fc932777971a14610b02
         {/each}
     </select>
 </span>
