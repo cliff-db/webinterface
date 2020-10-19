@@ -10,9 +10,10 @@
     "jsx": "preserve",
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
+    "baseUrl": ".",
     "typeRoots": [
-      "node_modules/@types/",
-      "typings/"
+      "./node_modules/@types/",
+      "./typings/"
     ],
     "strict": false,
     "skipLibCheck": true,

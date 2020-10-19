@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
     import Icon from "svelte-awesome";
     import { faChartBar } from "@fortawesome/free-regular-svg-icons";
     import {
