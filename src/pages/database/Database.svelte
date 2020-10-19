@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
     import Icon from "svelte-awesome";
     import { faChartBar } from "@fortawesome/free-regular-svg-icons";
     import {
@@ -12,7 +12,7 @@
         faShieldAlt,
     } from "@fortawesome/free-solid-svg-icons";
     import { _ } from 'svelte-i18n'
-    export let params = {};
+    export let params: any;
 </script>
 
 <style type="text/scss">

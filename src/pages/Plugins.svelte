@@ -1,20 +1,8 @@
-<script lang="ts">
+<script lang="typescript">
     import PluginComponent from "../components/PluginComponent.svelte";
+    import {PluginTab} from "../model/plugin-tab";
+    import {PluginInfo} from "../model/plugin-info";
     import { _ } from 'svelte-i18n';
-
-    enum PluginTab {
-        InstalledPlugins = 0,
-        PluginGallery = 1,
-    }
-
-    class PluginInfo {
-        constructor(
-            public name: string,
-            public description: string,
-            public version: string,
-            public installed: boolean
-        ) {}
-    }
 
     let currentTab: PluginTab = PluginTab.InstalledPlugins;
 

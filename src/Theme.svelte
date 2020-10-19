@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-    export let theme: string;
+    export let theme: string | null;
 
     onMount(() => {
         let className = `theme-${theme}`;
