@@ -1,16 +1,15 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "typings/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "node",
     "jsx": "preserve",
-    /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "typeRoots": [
       "./node_modules/@types/",
       "./typings/"
@@ -20,6 +19,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "useDefineForClassFields": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
   }
 }

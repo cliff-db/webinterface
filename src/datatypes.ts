@@ -35,7 +35,7 @@ export function getSuffix(type: DataType) {
 
 export function convert(val: number, from: DataType, to: DataType): number {
     const baseMultiplier = 1024;
-    let offset = to - from;
+    let offset = from - to;
     let multiplier = Math.pow(baseMultiplier, offset);
     if(offset > 0) {
         return val * multiplier;

@@ -1,9 +1,10 @@
 {
   "name": "cliff-webinterface",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "scripts": {
-    "build": "snowpack build",
-    "start": "snowpack dev",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public",
     "validate": "svelte-check"
   },
   "devDependencies": {
